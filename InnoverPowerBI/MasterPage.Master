@@ -1,0 +1,456 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="InnoverPowerBI.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+   <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title></title>
+    <script "text/javascript"  src="js/bootstrap.js"></script>
+  <!-- Ionicons -->
+      <link href="css/buttons.css" rel="stylesheet" />
+  <!-- jvectormap -->
+  <!-- Theme style -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="css/ionicons.min.css" />
+    <link href="css/AdminLTE.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/skin-blue.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/datatables.min.css" />
+    <link rel="stylesheet" href="css/daterangepicker.css" />
+    <link rel="stylesheet" href="css/select2.min.css" />
+    <link rel="stylesheet" href="css/blue.css" />
+    <link rel="stylesheet" href="css/blue.css" />
+    <link href="Styles/AdminLTE-2.4.3/plugins/timepicker/bootstrap-timepicker.min.css" rel="stylesheet" />
+     
+   <%-- <link href="css/bootstrap.min.css" rel="stylesheet" />--%>
+    <!-- over ridable css comes after bootstrap css -->
+    <style type="text/css">
+        .noscript-zone {
+            background-size: 100%;
+            height: 29%;
+            width: 30%;
+            margin: auto; /*background-image: url("images/ordermgmt2.png");*/
+            background-position: bottom center;
+            background-repeat: no-repeat;
+            background-color: none;
+        }
+
+        .dataTables_filter {
+            float: right;
+        }
+
+        .row {
+            margin-top: 2px;
+        }
+
+        @media (min-width: 992px) {
+            .modal-lg {
+                width: 95%;
+            }
+            .skin-blue .main-header .navbar {
+    background-color: #BED82A;
+}
+            .skin-blue .main-header .logo {
+    background-color: #BED82A;
+}
+            .main-footer {
+    background: #0000;
+}
+            
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="cp_head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="hold-transition skin-blue sidebar-mini  " 
+    style="height: 100%;">
+    
+  <%--  <noscript>
+        <div class="noscript-zone">
+        </div>
+        <br />
+        Please enable javascript to view this website correctly.
+    </noscript>--%>
+    <form id="form1" runat="server">
+        <div class="wrapper">
+            <!-- Main Header -->
+            <header class="main-header">
+            <a href="Dashboard.aspx" class="logo">
+                <span class="logo-mini"><b></b>PBI</span>
+                <!-- logo for regular state and mobile devices -->
+                <span class="logo-lg"><b>PBI</b></span>
+            </a>
+            <nav class="navbar navbar-static-top">
+                 <a href="#" class="sidebar-toggle"   onclick="toggleSidebar();" >
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+                  <div class="navbar-brand"><b>Power BI</b></div>
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <!-- Messages: style can be found in dropdown.less-->
+                      
+                        <!-- Notifications: style can be found in dropdown.less -->
+                       
+                        
+                        <!-- User Account: style can be found in dropdown.less -->
+                         
+                        <li class="dropdown user user-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                 <img src="img/login.gif" class="user-image" alt="User Image" />
+                                 <span class="hidden-xs"><%--<%= Session[CommonConstants.SESSION_USER_FULL_NAME]%>--%> </span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <!-- User image -->
+                                <li class="user-header">
+                                  <img alt="User Image" width="80" height="100" style="height: 100px;" class="img img-thumbnail" src="img/login.gif" />
+                                  <p>
+                                         <small>(Subhadeep Sarkar)</small>
+                                
+                                    </p>
+                                </li>
+                                <!-- Menu Body -->
+                               <%-- <li class="user-body">
+                                    <div class="row">
+                                        <div class="col-xs-4 text-center">
+                                            <a href="#">Followers</a>
+                                        </div>
+                                        <div class="col-xs-4 text-center">
+                                            <a href="#">Sales</a>
+                                        </div>
+                                        <div class="col-xs-4 text-center">
+                                            <a href="#">Friends</a>
+                                        </div>
+                                    </div>
+                                    <!-- /.row -->
+                                </li>--%>
+                                <!-- Menu Footer-->
+                                <li class="user-footer">
+                                   <%-- <div class="pull-left">
+                                        <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                    </div>--%>
+                                    <div class="pull-right">
+                                        <a href="login.aspx" class="btn btn-default btn-flat">Sign out</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- Control Sidebar Toggle Button -->
+                       
+                    </ul>
+                </div>
+
+            </nav>
+        </header>
+           <aside class="main-sidebar" style="background-color:#454142">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar"  style="height: auto; ">
+      <!-- Sidebar user panel -->
+      <div class="user-panel">
+        <div class="pull-left image">
+          <img src="img/logo.jpeg" class="img-circle" alt="User Image" />
+        </div>
+        <div class="pull-left info">
+          <p><span class="hidden-xs"><%--<%= Session[CommonConstants.SESSION_USER_FULL_NAME]%>--%> </span></p>
+          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+        </div>
+      </div>
+      <!-- search form -->
+      <form action="#" method="get" class="sidebar-form">
+      <%--  <div class="input-group sidebar-form">
+          <input type="text" name="q" class="form-control" placeholder="Search...">
+          <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat">
+                  <i class="fa fa-search"></i>
+                </button>
+              </span>
+        </div>--%>
+      </form>
+      <!-- /.search form -->
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu" data-widget="tree" >
+     <%--   <li class="header">MAIN NAVIGATION</li>--%>
+        <li class="treeview-open">
+          <a href="#">
+            <i style="color:#BED82A" class=" fa fa-home"></i> <span style="color:white" >Home</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li id="obsLoglink" runat="server"><a href="TimeSheet.aspx"><i style="color:#BED82A" class="fa fa-home"></i>Home</a></li>
+           
+          </ul>
+        </li>
+
+          
+      </ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content" style="min-height:700px;background-color:#e7edf5; ">
+                <!-- Main content -->
+                <section class="content-wrapper container-fluid" style="padding-top:0">
+
+                    <asp:ContentPlaceHolder ID="cp_body" runat="server">
+                    </asp:ContentPlaceHolder>
+                </section>
+                <!-- /.Main content -->
+            </div>
+            <!-- /.content-wrapper -->
+
+            <!-- Main Footer -->
+            <footer class="main-footer">
+                <!-- To the right -->
+                <div class="pull-right hidden-xs">
+                    <img src="img/innover.jfif" style="height: 30px" />
+                </div>
+                <!-- Default to the left -->
+                <strong><a style="color:#BED82A" href="#">INNOVER DIGITAL</a></strong>
+            </footer>
+
+            <!-- Control Sidebar (optional)-->
+          
+            <!-- /.control-sidebar -->
+            <!-- Add the sidebar's background. This div must be placed
+  immediately after the control sidebar -->
+            <div class="control-sidebar-bg"></div>
+
+        </div>
+        <!-- modal message-->
+        <div class="modal fade" id="modal_message" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title"></h4>
+                    </div>
+                    <div class="modal-body">
+                        <span id="modal-body-text"></span>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" id="btn-closemodalmessage" class="btn btn-danger" data-dismiss="modal">
+                            Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /modal message -->
+
+
+        <!-- Bootstrap 3.3.7 -->
+        
+        <!-- FastClick -->
+        <!-- AdminLTE App -->
+       
+       
+        <!-- Sparkline -->
+        
+        <!-- SlimScroll -->
+          <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/app.min.js"></script>
+        <script src="js/app.min.js"></script>
+        <script src="js/fastclick.min.js"></script>
+        <script src="js/jquery.slimscroll.min.js"></script>
+        <script type="text/javascript" src="js/datatables.min.js"></script>
+        <script src="js/moment.min.js"></script>
+        <!--reference :  http://www.daterangepicker.com/#config -->
+        <script src="js/daterangepicker.js"></script>
+        <script src="js/select2.full.min.js"></script>
+        <!-- Progress Bar  : http://github.hubspot.com/pace/docs/welcome/  --->
+        <script src="js/pace.min.js"></script>
+        <!--- reference : http://icheck.fronteed.com/#features  -->
+        <script src="js/icheck.min.js"></script>
+               <script type="text/javascript" src="js/jquery.stickytableheaders.min.js"></script>
+        <script src="Styles/AdminLTE-2.4.3/plugins/timepicker/bootstrap-timepicker.min.js"></script>
+        <script>
+
+            function toggleSidebar() { // $(".main-sidebar").toggle(); 
+                $("body").toggleClass("sidebar-collapse");
+            }
+
+            $(function () {
+                processImagesLazily();
+            });
+            //------------------------------------------------------------------------------
+            //--------lazy laoding of images. all images loading together may make page slow.----
+            //--reference :http://css-tricks.com/snippets/javascript/lazy-loading-images/ ---
+            //------------------------------------------------------------------------------
+            //to load images lazily when scrolling. 
+            document.addEventListener('scroll', processImagesLazily);
+
+            function processImagesLazily() {
+                var images = $("img.lazy");
+                //alert('inside function processScroll');
+                for (var i = 0; i < images.length; i++) {
+                    var img = images[i];
+                    if (img.getAttribute('data-src') != undefined && img.getAttribute('data-src').toString.length > 0 && img.getAttribute('data-src') == img.src) {
+                        //if src and data-src are same, image is loaded with correct image.                 
+                        continue;
+                    }
+                    // if (elementInViewport(img)) {
+                    loadImage(img);
+                    //}
+                }
+            };
+
+            function elementInViewport(el) {
+                //check whether image is on screen
+                var rect = el.getBoundingClientRect()
+                if (rect.top >= 0 && rect.left >= 0 && rect.top <= (waindow.innerHeight || document.documentElement.clientHeight)) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+
+
+            function loadImage(el) {
+                //make sure el has data-src set to source of original image to be displayed
+                var src = el.getAttribute('data-src');
+                el.src = src;
+            }
+
+            //------------------------------------------------------------------------------
+            //--------lazy laoding of images. ----------------------------------------------
+            //------------------------------------------------------------------------------
+
+            function showModalMessage(title, message) {
+                $(".modal-title").html(title);
+                $("#modal-body-text").html(message);
+                $("#modal_message").modal("show");
+            }
+
+            $(document).ready(function () {
+                //-----iCHECK------------------
+                //$("input[type='checkbox']").addClass("square-blue")
+                //$('input').iCheck({  checkboxClass: 'icheckbox_square-blue',
+                //    radioClass: 'iradio_square',
+                //    increaseArea: '20%' // optional
+                //});
+                //---END iCheck --------------
+
+                //-----------DateRangePicker ------------------------
+                var start = moment().subtract(0, 'days');
+                var end = moment();
+                $('.select').select2();
+                $('.drpicker').daterangepicker({
+                    locale: {
+                        format: 'DD/MM/YYYY'
+                    },
+                    startDate: start,
+                    endDate: end,
+                    ranges: {
+                        'Today': [moment(), moment()],
+                        'Last 2 Days': [moment().subtract(1, 'days'), moment()],
+                        'Last 3 Days': [moment().subtract(2, 'days'), moment()],
+                        'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                        'Last 10 Days': [moment().subtract(9, 'days'), moment()],
+                    }
+                });
+                var xlsBuilder = {
+                    filename: 'excel-dump',
+                    sheetName: 'excel-dump',
+                }
+                //-----------ENd  DateRangePicker ------------------------
+
+                //----------- DAtaTable ------------------------
+                var table = $('.datatable').DataTable({
+                    "lengthMenu": [[10, 25, 50, 100, 250, -1], [10, 25, 50, 100, 250, "All"]],
+                    "dom": '<flB<t>ip>',//'lfBrtip',
+                    //buttons: ['copy', 'excel','csv', 'print'],
+                    //buttons: ['copyHtml5', 'excelHtml5', 'csvHtml5'],
+                    buttons: [
+                   {
+                       extend: 'print',
+                       text: "<span class='fa fa-print'></span> Print"
+                   },
+
+                   {
+                       extend: 'copy',
+                       text: "<span class='fa fa-files-o'></span> Copy"
+                   },
+                   {
+                       extend: 'csv',
+                       text: "<span class='fa fa-file-text-o'></span> CSV"
+                   },
+                   $.extend(true, {}, xlsBuilder, {
+                       extend: 'excel',
+                       text: "<span class='fa fa-file-excel-o'></span> Excel"
+                   })
+                    ],
+                    "order": [],
+                    "ordering": false,
+                    fixedHeader: true,
+                    "scrollY": '60vh',
+                    scrollCollapse: true,
+                    "scrollX": true,
+                    "deferRender": true
+                });
+             
+
+                var table2 = $('.datatable2').DataTable({
+                    "lengthMenu": [[4, 10, 25,  -1], [4, 10, 25,  "All"]],
+                   // "length":[4],
+                    "dom": '<<t>ip>',//'lfBrtip',
+                    //buttons: ['copy', 'excel','csv', 'print'],
+                    //buttons: ['copyHtml5', 'excelHtml5', 'csvHtml5'],
+                    
+                    "order": [],
+                    "ordering": false,
+                    fixedHeader: true,
+                    "scrollY": '60vh',
+                    scrollCollapse: true,
+                    "scrollX": true,
+                    "deferRender": true
+                });
+
+                var table3 = $('.datatable3').DataTable({
+                    "lengthMenu": [[7, 10, 25, -1], [4, 10, 25, "All"]],
+                    // "length":[4],
+                    "dom": '<<t>ip>',//'lfBrtip',
+                    //buttons: ['copy', 'excel','csv', 'print'],
+                    //buttons: ['copyHtml5', 'excelHtml5', 'csvHtml5'],
+
+                    "order": [],
+                    "ordering": false,
+                    fixedHeader: true,
+                    "scrollY": '60vh',
+                    scrollCollapse: true,
+                    "scrollX": true,
+                    "deferRender": true
+                });
+
+
+                //table.buttons().container().appendTo($('.col-sm-6:eq(0)', table.table().container()));
+                //----------- DAtaTable ------------------------
+            });
+
+            var prm = Sys.WebForms.PageRequestManager.getInstance();
+            prm.add_initializeRequest(InitializeRequest);
+            prm.add_endRequest(EndRequest);
+
+            function InitializeRequest(sender, args) {
+                Pace.start();
+            }
+
+            function EndRequest(sender, args) {
+                Pace.stop();
+            }
+        </script>
+        <asp:ContentPlaceHolder ID="cp_scripts" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>

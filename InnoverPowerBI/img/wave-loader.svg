@@ -1,0 +1,25 @@
+<svg class="lds-wave" width="144px"  height="144px"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid"><circle cx="11" cy="48.6731" ng-attr-r="{{config.radius}}" fill="#408ee0" r="3">
+  <animate attributeName="cy" values="40;60;40" times="0;0.5;1" dur="1s" calcMode="spline" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" begin="0s" repeatCount="indefinite"></animate>
+</circle><circle cx="18" cy="54.9532" ng-attr-r="{{config.radius}}" fill="#1b75be" r="3">
+  <animate attributeName="cy" values="40;60;40" times="0;0.5;1" dur="1s" calcMode="spline" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" begin="-0.08333333333333333s" repeatCount="indefinite"></animate>
+</circle><circle cx="25" cy="58.7396" ng-attr-r="{{config.radius}}" fill="#1b75be" r="3">
+  <animate attributeName="cy" values="40;60;40" times="0;0.5;1" dur="1s" calcMode="spline" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" begin="-0.16666666666666666s" repeatCount="indefinite"></animate>
+</circle><circle cx="32" cy="59.9698" ng-attr-r="{{config.radius}}" fill="#408ee0" r="3">
+  <animate attributeName="cy" values="40;60;40" times="0;0.5;1" dur="1s" calcMode="spline" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" begin="-0.25s" repeatCount="indefinite"></animate>
+</circle><circle cx="39" cy="59.4762" ng-attr-r="{{config.radius}}" fill="#408ee0" r="3">
+  <animate attributeName="cy" values="40;60;40" times="0;0.5;1" dur="1s" calcMode="spline" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" begin="-0.3333333333333333s" repeatCount="indefinite"></animate>
+</circle><circle cx="46" cy="56.8361" ng-attr-r="{{config.radius}}" fill="#1b75be" r="3">
+  <animate attributeName="cy" values="40;60;40" times="0;0.5;1" dur="1s" calcMode="spline" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" begin="-0.4166666666666667s" repeatCount="indefinite"></animate>
+</circle><circle cx="53" cy="51.3269" ng-attr-r="{{config.radius}}" fill="#1b75be" r="3">
+  <animate attributeName="cy" values="40;60;40" times="0;0.5;1" dur="1s" calcMode="spline" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" begin="-0.5s" repeatCount="indefinite"></animate>
+</circle><circle cx="60" cy="45.0468" ng-attr-r="{{config.radius}}" fill="#408ee0" r="3">
+  <animate attributeName="cy" values="40;60;40" times="0;0.5;1" dur="1s" calcMode="spline" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" begin="-0.5833333333333334s" repeatCount="indefinite"></animate>
+</circle><circle cx="67" cy="41.2604" ng-attr-r="{{config.radius}}" fill="#408ee0" r="3">
+  <animate attributeName="cy" values="40;60;40" times="0;0.5;1" dur="1s" calcMode="spline" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" begin="-0.6666666666666666s" repeatCount="indefinite"></animate>
+</circle><circle cx="74" cy="40.0302" ng-attr-r="{{config.radius}}" fill="#1b75be" r="3">
+  <animate attributeName="cy" values="40;60;40" times="0;0.5;1" dur="1s" calcMode="spline" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" begin="-0.75s" repeatCount="indefinite"></animate>
+</circle><circle cx="81" cy="40.5238" ng-attr-r="{{config.radius}}" fill="#1b75be" r="3">
+  <animate attributeName="cy" values="40;60;40" times="0;0.5;1" dur="1s" calcMode="spline" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" begin="-0.8333333333333334s" repeatCount="indefinite"></animate>
+</circle><circle cx="88" cy="43.1639" ng-attr-r="{{config.radius}}" fill="#408ee0" r="3">
+  <animate attributeName="cy" values="40;60;40" times="0;0.5;1" dur="1s" calcMode="spline" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" begin="-0.9166666666666666s" repeatCount="indefinite"></animate>
+</circle></svg>

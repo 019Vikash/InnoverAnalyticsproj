@@ -1,0 +1,235 @@
+html, body {
+    background-color: #EEE;
+    font-family: sans-serif !important;
+    font-size: 14px;
+    background: url(http://demo1.mbiolims.com/common/images/logo_shadow.png) #EEE no-repeat 10% 30%;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+}
+.login-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 500px;
+  min-height: 400px;
+  width: 60%;
+  min-width: 400px;
+  max-width: 900px;
+  margin: 10rem;
+  border-radius: 3px;
+  
+  -moz-box-shadow: 1px 1px 50px 0px #656565;
+ -webkit-box-shadow: 1px 1px 50px 0px #656565;
+  -o-box-shadow: 1px 1px 50px 0px #656565;
+  box-shadow: 1px 1px 50px 0px #656565;
+  filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=50);
+  
+  section {
+    width: 50%;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    
+    &.login-form {
+      height: 100%;
+      order: 1;
+      width: 55%;
+      background-color: #F9F9F9;
+      position: relative;
+      
+      .messages {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        left: 0;
+        
+        .message {
+          text-align: center;
+          color: #fff;
+          height: 50px;
+          line-height: 50px;
+
+          &.warning {
+            background: #c09853;
+          }
+        }
+      }
+      
+      .user-avatar {
+          width: 100%;
+          height: 100px;
+          margin-bottom: 10%;
+          text-align: center;
+        .avatar {
+          width: 64px;
+          height: 64px;
+          border-radius: 5%;
+          margin-bottom: 10px;
+        }
+        p.avatar-help {
+          font-size: 0.6em;
+        }
+        p.no-avatar {
+          line-height: 100px;
+        }
+      }
+      .login-field {
+        position: relative; 
+        width: 100%;
+        
+        .user-login, .user-password {
+          box-sizing: border-box;
+          width: 100%;
+          height: 50px;
+          margin: 5px auto;
+          border: 1px solid #EEE;
+          border-bottom: 1px solid #CCC;
+          padding: 5px 5px 5px 30px;
+          box-sizing: border-box;
+
+          + .glyphicon {
+            position: absolute;
+            top: 22px;
+            left: 10px;
+            color: #CCC;
+            transition: color 0.3s ease-out;
+          }
+          
+          &:focus + .glyphicon {
+            color: #1E6FB2;
+          }
+        }
+      }
+      input[type=submit] {
+          background-color: #1E6FB2;
+          color: #FFF;
+          border: 0;
+          box-sizing: border-box;
+          width: 100%;
+          height: 50px;
+          margin: 5px auto;
+          padding: 5px 20px;
+          font-size: 1em;
+          transition: background 0.3s ease-out;
+        
+          &:disabled {
+            background-color: #CCC;
+          }
+          &:active {
+            color: #000;
+            background-color: #ffe57d;
+            transition: none;
+            border-bottom-color: darkgoldenrod;
+            border-bottom-style: solid;
+            border-bottom-width: 1px;
+          }
+      }
+      .forget-passsword {
+        margin-top: 10%;
+      }
+      
+      .maintenance {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+
+        p:first-child .glyphicon {
+          width: 30%;
+          text-align: center;
+          padding: 5%;
+          border-radius: 50%;
+          background-color: #1E6FB2;
+          color: #FFF;
+          font-size: 3em;
+          margin: 10% auto;
+        }
+        p.notify-maintenance {
+          font-size: 0.8em;
+          .glyphicon {
+            display: inline;
+          }
+        }
+        * { display: block; }
+        .maintenance-connection {
+          align-self: flex-end;
+        }
+      }
+    }
+    &.login-info {
+      height: 50%;
+      order: 2;
+      
+      background-color: #1E6FB2;
+      color: #FFF;
+      justify-content: space-between;
+      
+      /*background-image: url('http://www.modul-bio.com/wp-content/uploads/2015/04/10924325-576x413.jpg');
+      background-size: cover;
+      background-position: 50% 50%;*/
+      
+      .client-logo {
+        width: 120px;
+        height: 120px;
+        background: url('http://www.modul-bio.com/wp-content/uploads/2016/02/nyu1.png') #1E6FB2;
+        //background: url('http://www.gco-cancer.org/images/logos_gco/small/small_LYSARC.png') #FFF no-repeat 20%;
+        background-size: cover;
+        border-radius: 5%;
+        margin: 0 auto;
+      }
+    }
+    &.application-info {
+      height: 50%;
+      order: 3;
+      justify-content: flex-end;
+      background-color: #1E6FB2;
+      color: #FFF;
+      
+      .application-logo {
+        text-align: center;
+      }
+      
+      .copyright {
+        text-align: justify;
+        font-size: 0.7em;
+        margin-top: 5%;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .login-wrapper {
+    margin: 0;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    border-radius: 3px;
+    min-height: 100%;
+    
+    section { width: 40%; }
+    section.login-form { width: 60%; }
+  }
+}
+
+@media (max-width: 550px) {
+  section.login-wrapper {
+    height: 100%;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+  
+    section {
+      width: 100% !important;
+      height: auto !important;
+      &.login-form { order: 2; }
+      &.login-info { order: 1; }
+      &.application-info { order: 3; }
+    }
+  }
+}
